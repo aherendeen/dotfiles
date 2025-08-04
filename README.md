@@ -55,6 +55,16 @@ chezmoi apply
 - [chezmoi documentation](https://www.chezmoi.io/docs/)
 - [chezmoi templates](https://www.chezmoi.io/user-guide/templates/)
 
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome! To contribute:
+
+- Fork this repository
+- Create a new branch for your changes
+- Submit a pull request with a clear description
+
+For questions or ideas, open an issue or discussion.
+
 ---
 
 Feel free to fork or adapt these dotfiles for your own use!
