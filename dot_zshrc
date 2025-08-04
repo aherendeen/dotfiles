@@ -33,10 +33,6 @@ source "$ZSH/oh-my-zsh.sh"
 # Load personal aliases if available
 [[ -f "$HOME/aliases.zsh" ]] && source "$HOME/aliases.zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
-
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
