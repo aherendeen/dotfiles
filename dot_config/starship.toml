@@ -1,0 +1,166 @@
+# ┌────────────────────────────────────────────┐
+# │           Starship  🚀🚀🚀                  │
+# └────────────────────────────────────────────┘
+
+# ~/.config/starship.toml
+
+# ── Format Definition ────────────────────────────────────────
+format = """
+[╭╴](fg:arrow)
+$username$hostname$os$git_branch
+(at $directory)$cmd_duration
+(via$python$conda$nodejs$c$rust$java)
+[╰─](fg:arrow)$character
+"""
+
+add_newline = true
+palette = "hyperdev"
+
+# ── Palette Customization ────────────────────────────────────
+[palettes.hyperdev]
+arrow = "#44475a"
+os = "#16f4d0"
+os_admin = "#ff5555"
+directory = "#8be9fd"
+time = "#bdfffd"
+node = "#50fa7b"
+git = "#ff79c6"
+git_status = "#f8f8f2"
+python = "#f1fa8c"
+conda = "#70e000"
+java = "#ffb86c"
+rust = "#ffb86c"
+clang = "#8be9fd"
+duration = "#ff5555"
+text_color = "#f8f8f2"
+text_light = "#282a36"
+
+# ── Core Modules ─────────────────────────────────────────────
+[username]
+format = "[ $user](fg:$style)"
+style_user = "bold os"
+style_root = "bold os_admin"
+show_always = true
+
+[hostname]
+disabled = false
+format = "@[$hostname](fg:os) "
+
+[os]
+format = " on [($name)]($style)"
+style = "bold os"
+disabled = false
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "fg:directory"
+read_only = " "
+read_only_style = "fg:directory"
+truncate_to_repo = true
+truncation_length = 3
+
+[cmd_duration]
+min_time = 500
+format = "took [󱎫 $duration]($style) "
+style = "bold fg:duration"
+
+[character]
+success_symbol = "[❯](fg:arrow)"
+error_symbol = "[❯](fg:red)"
+
+[git_branch]
+format = "via [$symbol$branch]($style)"
+symbol = " "
+style = "bold fg:git"
+
+[git_status]
+format = '[\($all_status$ahead_behind\)]($style)'
+style = "bold fg:git_status"
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = "🟡 "
+modified = "📝 "
+staged = "🟢 "
+conflicted = "⚔️ "
+deleted = "❌ "
+stashed = "📦 "
+renamed = "➡️ "
+typechanged = "🔁 "
+
+# ── Language Modules ─────────────────────────────────────────
+[nodejs]
+format = "[ $symbol$version ]($style)"
+style = "bg:node fg:text_light"
+symbol = " "
+version_format = "${raw}"
+disabled = false
+detect_folders = ["node_modules"]           # Only show if node_modules is present
+detect_files = ["package.json", "index.js"]
+
+[python]
+format = "[ $symbol$version ($virtualenv) ]($style)"
+symbol = " "
+version_format = "${raw}"
+style = "bg:python fg:text_light"
+disabled = false
+
+[conda]
+format = "[ $symbol$environment ]($style)"
+style = "bg:conda fg:text_light"
+symbol = " "
+ignore_base = false
+disabled = false
+
+[java]
+format = "[ $symbol$version ]($style)"
+style = "bg:java fg:text_light"
+symbol = " "
+version_format = "${raw}"
+disabled = false
+
+[rust]
+format = "[ $symbol$version ]($style)"
+style = "bg:rust fg:text_light"
+symbol = " "
+version_format = "${raw}"
+disabled = false
+
+[c]
+format = "[ $symbol($version(-$name)) ]($style)"
+style = "bg:clang fg:text_light"
+symbol = " "
+version_format = "${raw}"
+disabled = false
+
+# ── Optional Modules ─────────────────────────────────────────
+[docker_context]
+disabled = false
+symbol = " "
+format = "[ $symbol$context ](fg:directory)"
+
+[time]
+disabled = false
+format = "at [󱑈 $time]($style)"
+time_format = "%H:%M"
+style = "bold fg:time"
+
+[battery]
+disabled = false
+full_symbol = "🔋"
+charging_symbol = "⚡"
+discharging_symbol = "🔌"
+format = "[$symbol$percentage]($style) "
+
+[env_var.STAGE]
+format = "[[$env_value]](bold fg:conda)"
+default = ""
+
+[memory_usage]
+disabled = false
+threshold = 70
+symbol = " "
+style = "bold fg:duration"
+
+[package]
+disabled = false
