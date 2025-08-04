@@ -42,7 +42,7 @@ if command -v starship >/dev/null 2>&1; then
 fi
 
 # completions
-fpath=(/Users/andrew/.docker/completions $fpath)
+fpath=(~/.docker/completions $fpath)
 eval "$(gh copilot alias -- zsh)"
 # Only run compinit once
 autoload -Uz compinit && compinit
