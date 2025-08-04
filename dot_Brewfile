@@ -1,3 +1,9 @@
+# --- Homebrew Taps ---
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+
+# --- Homebrew Formulae ---
 brew "gettext"
 brew "autoenv"
 brew "openssl@3"
@@ -30,6 +36,8 @@ brew "trash"
 brew "tree"
 brew "vite"
 brew "z"
+
+# --- Homebrew Casks ---
 cask "alt-tab"
 cask "appcleaner"
 cask "brave-browser"
@@ -71,6 +79,8 @@ cask "windsurf"
 cask "wordservice"
 cask "xmenu"
 cask "zulu"
+
+# --- VS Code Extensions ---
 vscode "aaron-bond.better-comments"
 vscode "alefragnani.bookmarks"
 vscode "alefragnani.project-manager"
@@ -166,3 +176,59 @@ vscode "yasht.terminal-all-in-one"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yzhang.markdown-all-in-one"
 vscode "zguolee.tabler-icons"
+
+# --- Mac App Store Apps ---
+mas "Actions", id: 1586435171
+mas "Battery Indicator", id: 1206020918
+mas "Bitwarden", id: 1352778147
+mas "Blankie", id: 6740096581
+mas "Camera Preview", id: 1632827132
+mas "Charmstone", id: 1563735522
+mas "ColorFolder", id: 1450345160
+mas "ColorSlurp", id: 1287239339
+mas "Command X", id: 6448461551
+mas "Commander", id: 1636862100
+mas "DaisyDisk", id: 411643860
+mas "Data Jar", id: 1453273600
+mas "Dato", id: 1470584107
+mas "Developer", id: 640199958
+mas "Feed Compass", id: 1458648487
+mas "Feed Curator", id: 1458647758
+mas "Folder Peek", id: 1615988943
+mas "GarageBand", id: 682658836
+mas "HEIC Converter", id: 1294126402
+mas "Image2Icon", id: 992115977
+mas "Just Press Record", id: 1033342465
+mas "Keynote", id: 409183694
+mas "Klack", id: 6446206067
+mas "Launchey 2", id: 1365625021
+mas "Lungo", id: 1263070803
+mas "Mactracker", id: 430255202
+mas "Movie Explorer", id: 802224528
+mas "MusicBox", id: 1614730313
+mas "MusicHarbor", id: 1440405750
+mas "MusicMaster", id: 633275169
+mas "Name Mangler 3", id: 603637384
+mas "Numbers", id: 409203825
+mas "OhMyStar", id: 1218642292
+mas "Pages", id: 409201541
+mas "Paprika Recipe Manager 3", id: 1303222628
+mas "PastePal", id: 1503446680
+mas "Pixelmator Pro", id: 1289583905
+mas "Plain Text Editor", id: 1572202501
+mas "Scratchpad", id: 6504040051
+mas "ScreenFloat", id: 414528154
+mas "Shortcut Keeper", id: 1585404175
+mas "Simple Web Server", id: 1625925255
+mas "SnippetsLab", id: 1006087419
+mas "SongButler", id: 1483406279
+mas "Spaced", id: 1666327168
+mas "Speediness", id: 1596706466
+mas "SwitchGlass", id: 1498546559
+mas "Things", id: 904280696
+mas "Tot", id: 1491071483
+mas "Trickster", id: 509641724
+mas "Type", id: 1401007562
+mas "UpNote", id: 1398373917
+mas "Velja", id: 1607635845
+mas "Xcode", id: 497799835
