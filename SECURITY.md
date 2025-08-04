@@ -1,16 +1,5 @@
 # Security Policy
 
-## Supported Versions
-
-The following table lists which versions of this project currently receive security updates:
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-
 ## Reporting a Vulnerability
 
 If you discover a security vulnerability, please report it by opening a [GitHub Security Advisory](https://github.com/aherendeen/dotfiles/security/advisories/new) or by emailing the repository maintainer.
