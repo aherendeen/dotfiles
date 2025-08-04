@@ -15,13 +15,13 @@ plugins=(
   npm
   fzf
   zsh-completions
-  zsh-autosuggestions
   zsh-history-substring-search
   alias-finder
   autojump
   thefuck
   z
   command-not-found
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
@@ -34,8 +34,8 @@ if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
-# completions
+
 fpath=($HOME/.docker/completions $fpath)
 eval "$(gh copilot alias -- zsh)"
-# Only run compinit once
-autoload -Uz compinit && compinit
+
+autoload -Uz compinit && compinit -u
