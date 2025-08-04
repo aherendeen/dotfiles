@@ -1,0 +1,154 @@
+# Global .gitignore for macOS, editors, and tools
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Thumbnails
+._*
+
+# macOS metadata
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+
+# macOS resource forks
+*.fseventsd
+*.Spotlight-V100
+*.Trashes
+
+# VS Code
+.vscode/
+.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+
+# Logs
+*.log
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+*.pyo
+*.pyd
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Others
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*.old
+
+# Environment files
+.env
+.env.*
+
+# Coverage
+coverage/
+*.lcov
+
+# Misc
+*.pid
+*.seed
+*.pid.lock
+
+# System files
+Desktop.ini
+Thumbs.db
+
+# Trash
+*.Trash-*
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Caches
+.cache/
+.npm/
+
+# Homebrew
+Cellar/
+Caskroom/
+
+# Xcode
+*.xcuserstate
+*.xcworkspace
+*.xcodeproj
+*.xcuserdata
+
+# SwiftPM
+.build/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Flutter
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# Android Studio
+.gradle/
+local.properties
+
+# Expo
+.expo/
+

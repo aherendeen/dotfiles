@@ -1,0 +1,47 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.dmg
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Caches
+.cache/
+
+# System files
+Desktop.ini
+Thumbs.db
+
+# Trash
+*.Trash-*
