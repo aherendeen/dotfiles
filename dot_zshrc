@@ -1,7 +1,7 @@
 # ------------------------
 # Path Setup
 # ------------------------
-export PATH="$HOME/.local/bin:$HOME/bin:/Users/andrew/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.codeium/windsurf/bin:$PATH"
 export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin"
 export ZSH="$HOME/.oh-my-zsh"
 HIST_STAMPS="yyyy-mm-dd"
@@ -42,7 +42,7 @@ if command -v starship >/dev/null 2>&1; then
 fi
 
 # completions
-fpath=(~/.docker/completions $fpath)
+fpath=($HOME/.docker/completions $fpath)
 eval "$(gh copilot alias -- zsh)"
 # Only run compinit once
 autoload -Uz compinit && compinit
