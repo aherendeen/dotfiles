@@ -1,6 +1,10 @@
 # dotfiles
-
+  
 Welcome! This repository contains my personal dotfiles, managed with [chezmoi](https://www.chezmoi.io/). Dotfiles are configuration files for your shell, editor, and other tools, allowing you to personalize your development environment across machines.
+
+## 📚 Documentation
+
+- [Dotfiles Documentation Index](./docs/index.md)
 
 ## What is chezmoi?
 
