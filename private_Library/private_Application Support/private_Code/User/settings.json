@@ -1,0 +1,130 @@
+{
+  "editor.fontFamily": "Hack, JetBrains Mono, Fira Code, Cascadia Code, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, FiraCode Nerd Font, MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
+
+  // --- Telemetry ---
+  "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
+  "telemetry.editStats.enabled": false,
+
+  // --- Git ---
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+  "git.autoRepositoryDetection": false,
+
+  // --- Editor Behavior ---
+  "editor.tabSize": 2,
+  "files.autoSaveWhenNoErrors": true,
+  "files.autoSaveWorkspaceFilesOnly": true,
+  "files.simpleDialog.enable": true,
+
+  // --- Explorer ---
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  // --- Terminal ---
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.external.osxExec": "iTerm.app",
+
+  // --- Formatting & Linting ---
+  "eslint.run": "onSave",
+  "prettier.documentSelectors": ["**/*.astro", "**/*.js", "**/*.ts"],
+  "prettier.requireConfig": true,
+  "prettier.experimentalTernaries": true,
+
+  // --- GitHub Copilot ---
+  "github.copilot.enable": {
+    "markdown": true,
+    "scminput": true,
+    "plaintext": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+
+  // --- Extensions ---
+  "errorLens.ignoreUntitled": true,
+  "errorLens.onSave": true,
+  "errorLens.statusBarColorsEnabled": true,
+  "errorLens.statusBarIconsEnabled": true,
+  "errorLens.statusBarMessageEnabled": true,
+  "less.lint.duplicateProperties": "warning",
+  "scss.lint.duplicateProperties": "warning",
+
+  // --- Remote / Tunnels / Misc ---
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+
+  // --- Misc ---
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  "accessibility.verbosity.terminal": false,
+  "workbench.iconTheme": "spacebox.file-icon-theme",
+  "projectManager.git.baseFolders": [
+    "~/git"
+  ],
+  "git.autofetch": true,
+  "indentRainbow.indicatorStyle": "light",
+  "workbench.startupEditor": "none",
+  "terminal.explorerKind": "both",
+  "terminalAllInOne.terminalTheme": "Google Dark",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#1D1F21",
+    "terminal.foreground": "#C5C8C6",
+    "terminalCursor.background": "#C5C8C6",
+    "terminalCursor.foreground": "#C5C8C6",
+    "terminal.ansiBlack": "#1D1F21",
+    "terminal.ansiBlue": "#3971ED",
+    "terminal.ansiBrightBlack": "#969896",
+    "terminal.ansiBrightBlue": "#3971ED",
+    "terminal.ansiBrightCyan": "#3971ED",
+    "terminal.ansiBrightGreen": "#198844",
+    "terminal.ansiBrightMagenta": "#A36AC7",
+    "terminal.ansiBrightRed": "#CC342B",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+    "terminal.ansiBrightYellow": "#FBA922",
+    "terminal.ansiCyan": "#3971ED",
+    "terminal.ansiGreen": "#198844",
+    "terminal.ansiMagenta": "#A36AC7",
+    "terminal.ansiRed": "#CC342B",
+    "terminal.ansiWhite": "#C5C8C6",
+    "terminal.ansiYellow": "#FBA922"
+  },
+  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+  "markdown-preview-enhanced.alwaysShowBacklinksInPreview": true,
+  "chat.mcp.discovery.enabled": false,
+  "chat.mcp.serverSampling": {
+    "Global in Code: github": {
+      "allowedModels": [
+        "github.copilot-chat/gpt-4.1",
+        "github.copilot-chat/claude-sonnet-4",
+        "github.copilot-chat/gemini-2.5-pro"
+      ]
+    }
+  },
+  "github.copilot.chat.localeOverride": "en",
+  "github.copilot.chat.startDebugging.enabled": false,
+  "github.copilot.chat.agent.currentEditorContext.enabled": false,
+  "github.copilot.chat.edits.suggestRelatedFilesForTests": false,
+  "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory": false,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "githubRepositories.autoFetch.enabled": false,
+  "githubRepositories.experimental.prefetch": false,
+  "githubRepositories.lfs.read.enabled": false,
+  "githubRepositories.lfs.write.enabled": false,
+  "html.format.templating": true,
+  "markdown.validate.duplicateLinkDefinitions.enabled": "error",
+  "markdown.updateLinksOnFileMove.enabled": "prompt",
+  "markdown.preview.typographer": true,
+  "files.autoSave": "afterDelay",
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.cloudChanges.autoResume": "off",
+  "workbench.cloudChanges.continueOn": "off",
+  "todo-tree.tree.autoRefresh": false,
+  "git.autorefresh": false,
+  "github-actions.workflows.pinned.refresh.interval": 999,
+  "git-graph.keyboardShortcut.refresh": "UNASSIGNED"
+}
