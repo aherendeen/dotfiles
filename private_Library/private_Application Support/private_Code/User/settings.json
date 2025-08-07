@@ -15,9 +15,61 @@
 
   // --- Editor Behavior ---
   "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.trimAutoWhitespace": true,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "editor.rulers": [80, 120],
+  "editor.minimap.enabled": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.linkedEditing": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.suggest.showKeywords": false,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
+  "editor.quickSuggestionsDelay": 10,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.removeUnusedImports": "explicit"
+  },
+  "editor.fontLigatures": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.renderControlCharacters": false,
+  "editor.showFoldingControls": "mouseover",
+  "editor.foldingHighlight": false,
+  "editor.occurrencesHighlight": "multiFile",
+  "editor.selectionHighlight": false,
+  "editor.hover.delay": 300,
+  "editor.parameterHints.enabled": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
   "files.autoSaveWhenNoErrors": true,
   "files.autoSaveWorkspaceFilesOnly": true,
   "files.simpleDialog.enable": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.hotExit": "onExitAndWindowClose",
+  "files.defaultLanguage": "",
+  "files.eol": "\n",
 
   // --- Explorer ---
   "explorer.confirmDelete": false,
@@ -95,16 +147,6 @@
   },
   "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
   "markdown-preview-enhanced.alwaysShowBacklinksInPreview": true,
-  "chat.mcp.discovery.enabled": false,
-  "chat.mcp.serverSampling": {
-    "Global in Code: github": {
-      "allowedModels": [
-        "github.copilot-chat/gpt-4.1",
-        "github.copilot-chat/claude-sonnet-4",
-        "github.copilot-chat/gemini-2.5-pro"
-      ]
-    }
-  },
   "github.copilot.chat.localeOverride": "en",
   "github.copilot.chat.startDebugging.enabled": false,
   "github.copilot.chat.agent.currentEditorContext.enabled": false,
@@ -119,12 +161,165 @@
   "markdown.validate.duplicateLinkDefinitions.enabled": "error",
   "markdown.updateLinksOnFileMove.enabled": "prompt",
   "markdown.preview.typographer": true,
-  "files.autoSave": "afterDelay",
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.cloudChanges.autoResume": "off",
   "workbench.cloudChanges.continueOn": "off",
   "todo-tree.tree.autoRefresh": false,
   "git.autorefresh": false,
   "github-actions.workflows.pinned.refresh.interval": 999,
-  "git-graph.keyboardShortcut.refresh": "UNASSIGNED"
+  "git-graph.keyboardShortcut.refresh": "UNASSIGNED",
+
+  // --- Performance & Modern Features ---
+  "editor.maxTokenizationLineLength": 20000,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.experimental.asyncTokenization": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/build/**": true,
+    "**/dist/**": true,
+    "**/.next/**": true,
+    "**/.nuxt/**": true,
+    "**/coverage/**": true,
+    "**/.vscode/**": true,
+    "**/tmp/**": true,
+    "**/temp/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/.next": true,
+    "**/.nuxt": true,
+    "**/coverage": true,
+    "**/.vscode": true,
+    "**/tmp": true,
+    "**/temp": true
+  },
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.includePackageJsonAutoImports": "auto",
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 5,
+  "editor.accessibilitySupport": "off",
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.find.autoFindInSelection": "never",
+  "editor.gotoLocation.multipleReferences": "peek",
+  "editor.gotoLocation.multipleDefinitions": "peek",
+  "editor.gotoLocation.multipleDeclarations": "peek",
+  "editor.gotoLocation.multipleImplementations": "peek",
+  "editor.gotoLocation.multipleTypeDefinitions": "peek",
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.decorations.colors": true,
+  "workbench.editor.decorations.badges": true,
+  "workbench.tree.indent": 8,
+  "workbench.list.smoothScrolling": true,
+  "workbench.reduceMotion": "off",
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "compact",
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "last",
+  "breadcrumbs.symbolPath": "last",
+
+  // --- Security & Privacy ---
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.emptyWindow": false,
+  
+  // --- Advanced Editor Features ---
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoSurround": "languageDefined",
+  "editor.colorDecorators": true,
+  "editor.copyWithSyntaxHighlighting": true,
+  "editor.dragAndDrop": true,
+  "editor.emptySelectionClipboard": false,
+  "editor.foldingStrategy": "indentation",
+  "editor.lightbulb.enabled": "on",
+  "editor.matchBrackets": "always",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  
+  // --- Workbench Optimizations ---
+  "workbench.activityBar.location": "default",
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 10,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editorAssociations": {
+    "*.md": "default"
+  },
+  "workbench.settings.editor": "json",
+  "workbench.settings.openDefaultKeybindings": true,
+  "workbench.settings.useSplitJSON": true,
+  
+  // --- Integrated Terminal Enhancements ---
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.allowMnemonics": false,
+  "terminal.integrated.commandsToSkipShell": [],
+  "terminal.integrated.copyOnSelection": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.fastScrollSensitivity": 5,
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  
+  // --- Language-Specific Settings ---
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
 }
