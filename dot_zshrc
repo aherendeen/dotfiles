@@ -86,6 +86,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export LESS="-R"
 export PAGER="less"
 
+[ -f ~/.codacy_env ] && source ~/.codacy_env
 [ -f ~/.zshrc.bw ] && source ~/.zshrc.bw
 
 if command -v gh >/dev/null 2>&1 && gh extension list | grep -q 'copilot'; then
