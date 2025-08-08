@@ -23,14 +23,15 @@ $swift\
 $terraform\
 $docker_context\
 $kubernetes\
+$helm\
 [](fg:#212736 bg:#16161e)\
 $aws\
 $gcloud\
 $azure\
 [](fg:#16161e bg:#0f0f14)\
+$memory_usage\
 $cmd_duration\
 $jobs\
-$battery\
 $time\
 [](fg:#0f0f14)\
 $line_break\
@@ -75,7 +76,7 @@ format = '[ $hostname ]($style)'
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
 format = "[ $path ]($style)"
-truncation_length = 4
+truncation_length = 3
 truncation_symbol = "…/"
 read_only = " 󰌾"
 home_symbol = " ~"
@@ -94,6 +95,9 @@ fish_style_pwd_dir_length = 1
 ".config" = " "
 "node_modules" = " "
 ".git" = " "
+"projects" = " "
+"dev" = " "
+"www" = "󰞉 "
 
 [git_branch]
 symbol = ""
@@ -105,16 +109,15 @@ truncation_length = 20
 style = "bg:#394260"
 format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
-conflicted = "🏳"
-deleted = ""
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+conflicted = "="
+deleted = ""
 modified = ""
 renamed = "󰁕"
 staged = ""
 stashed = ""
-untracked = ""
+untracked = "?"
 
 [git_metrics]
 added_style = "fg:#769ff0 bg:#394260"
@@ -188,6 +191,12 @@ style = "bg:#16161e"
 format = '[[ $symbol ($context) ](fg:#769ff0 bg:#16161e)]($style)'
 disabled = false
 
+[helm]
+symbol = "⎈"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+disabled = false
+
 [aws]
 symbol = ""
 style = "bg:#0f0f14"
@@ -244,4 +253,170 @@ vicmd_symbol = "[❮](bold blue)"
 symbol = "󰏗"
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+disabled = false
+
+[memory_usage]
+disabled = false
+threshold = 75
+symbol = "󰍛"
+style = "bg:#0f0f14"
+format = '[[ $symbol ${ram_pct} ](fg:#a0a9cb bg:#0f0f14)]($style)'
+
+# Additional useful modules for development
+[env_var.VIRTUAL_ENV]
+variable = "VIRTUAL_ENV"
+format = '[[ $env_value ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#212736"
+
+[nix_shell]
+disabled = false
+impure_msg = '[impure shell](bold red)'
+pure_msg = '[pure shell](bold green)'
+format = '[[ via $state( \($name\)) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#212736"
+
+[conda]
+style = "bg:#212736"
+format = '[[ $symbol$environment ](fg:#769ff0 bg:#212736)]($style)'
+symbol = "🅒 "
+
+[spack]
+style = "bg:#212736"
+format = '[[ $symbol$environment ](fg:#769ff0 bg:#212736)]($style)'
+symbol = "🅢 "
+
+[rlang]
+symbol = "📐"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[julia]
+symbol = "ஃ"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[crystal]
+symbol = "🔮"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[cmake]
+symbol = "△"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[dart]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[deno]
+symbol = "🦕"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[dotnet]
+symbol = "🥅"
+style = "bg:#212736"
+format = '[[ $symbol ($version)( 🎯 $tfm) ](fg:#769ff0 bg:#212736)]($style)'
+
+[elixir]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[elm]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[erlang]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[nim]
+symbol = "👑"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[ocaml]
+symbol = "🐫"
+style = "bg:#212736"
+format = '[[ $symbol ($version)( \($switch_indicator$switch_name\)) ](fg:#769ff0 bg:#212736)]($style)'
+
+[perl]
+symbol = "🐪"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[purescript]
+symbol = "<$>"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[scala]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[zig]
+symbol = "↯"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+# Improved cloud configuration
+[openstack]
+symbol = "☁️"
+style = "bg:#0f0f14"
+format = '[[ $symbol $cloud(\($project\)) ](fg:#769ff0 bg:#0f0f14)]($style)'
+
+[pulumi]
+symbol = ""
+style = "bg:#0f0f14"
+format = '[[ $symbol $stack ](fg:#769ff0 bg:#0f0f14)]($style)'
+
+# Container and virtualization
+[singularity]
+symbol = ""
+style = "bg:#16161e"
+format = '[[ $symbol \[$env\] ](fg:#769ff0 bg:#16161e)]($style)'
+
+[vagrant]
+symbol = "⍱"
+style = "bg:#16161e"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#16161e)]($style)'
+
+# Version control improvements
+[fossil_branch]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+
+[hg_branch]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+
+[pijul_channel]
+symbol = "🪣"
+style = "bg:#394260"
+format = '[[ $symbol $channel ](fg:#769ff0 bg:#394260)]($style)'
+
+# System status improvements
+[status]
+style = "bg:#0f0f14"
+symbol = "🔴"
+format = '[[ $symbol $status ](fg:#a0a9cb bg:#0f0f14)]($style)'
+disabled = false
+
+[sudo]
+style = "bg:#0f0f14"
+symbol = "🧙"
+format = '[[ $symbol ](fg:#a0a9cb bg:#0f0f14)]($style)'
 disabled = false
