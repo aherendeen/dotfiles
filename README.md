@@ -117,3 +117,4 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 > **Tip:** Fork freely — but be mindful of how you handle secrets. Never commit unencrypted sensitive files.
+
