@@ -1,12 +1,48 @@
-export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.codeium/windsurf/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# Performance improvements
+zmodload zsh/complist
+autoload -Uz compinit
+if [[ $(/usr/bin/find "${ZDOTDIR:-$HOME}/.zcompdump" -mtime +1 -print 2>/dev/null) ]]; then
+  compinit -d "${ZDOTDIR:-$HOME}/.zcompdump"
+else
+  compinit -C -d "${ZDOTDIR:-$HOME}/.zcompdump"
+fi
+
+# PATH setup with better organization
+typeset -U path PATH
+path=(
+  $HOME/.local/bin
+  $HOME/bin
+  $HOME/.codeium/windsurf/bin
+  /opt/homebrew/bin
+  /opt/homebrew/sbin
+  $path
+)
+export PATH
+
 export ZSH="$HOME/.oh-my-zsh"
+
+# History configuration
+HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
 HIST_STAMPS="yyyy-mm-dd"
+setopt EXTENDED_HISTORY
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_VERIFY
 
 plugin_list=(
   git
   macos
   brew
-  docker
   vscode
   nvm
   gh
@@ -29,8 +65,8 @@ if [[ -s "$ZSH/oh-my-zsh.sh" ]]; then
   source "$ZSH/oh-my-zsh.sh"
 fi
 
-# Load personal aliases if available
 [[ -f "$HOME/aliases.zsh" ]] && source "$HOME/aliases.zsh"
+[[ -f "$HOME/functions.zsh" ]] && source "$HOME/functions.zsh"
 
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
@@ -39,8 +75,20 @@ fi
 export EDITOR="code --wait"
 export VISUAL="$EDITOR"
 
-fpath=($HOME/.docker/completions $fpath)
+# Better terminal experience
+setopt AUTO_CD              # cd by typing directory name if it's not a command
+setopt CORRECT              # command auto-correction
+setopt COMPLETE_ALIASES     # autocompletion of command line switches for aliases
+setopt MULTIOS              # perform implicit tees or cats when multiple redirections are attempted
+
+# Environment variables
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+export LESS="-R"
+export PAGER="less"
+
 eval "$(gh copilot alias -- zsh)"
 
-autoload -Uz compinit
-compinit -d "${ZDOTDIR:-$HOME}/.zcompdump"
+# Remove duplicate compinit call
+# autoload -Uz compinit
+# compinit -d "${ZDOTDIR:-$HOME}/.zcompdump"
