@@ -1,0 +1,3 @@
+runtimes: null
+tools:
+    - trivy@0.65.0
