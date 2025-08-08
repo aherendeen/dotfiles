@@ -275,3 +275,5 @@ typings/
 # Temporary folders
 tmp/
 temp/
+.bw_session
+.config/age/keys.txt
