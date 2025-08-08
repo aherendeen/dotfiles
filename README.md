@@ -1,78 +1,119 @@
-# dotfiles
+# Dotfiles
 
-[![Codacy Security Scan](https://github.com/aherendeen/dotfiles/actions/workflows/codacy.yml/badge.svg?branch=main)](https://github.com/aherendeen/dotfiles/actions/workflows/codacy.yml)
-[![GitHub License](https://img.shields.io/github/license/aherendeen/dotfiles)](https://github.com/aherendeen/dotfiles/blob/main/LICENSE)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/64b82ab35f5946f7907bd071f0ae6d76)](https://app.codacy.com/gh/aherendeen/dotfiles/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![GitHub License](https://img.shields.io/github/license/aherendeen/dotfiles)](LICENSE)
 
-Welcome! This repository contains my personal dotfiles, managed with [chezmoi](https://www.chezmoi.io/). Dotfiles are configuration files for your shell, editor, and other tools, allowing you to personalize your development environment across machines.
+> Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/), keeping my development environment consistent, secure, and portable.
 
-## 📚 Documentation
+---
 
-- [Dotfiles Documentation Index](./docs/index.md)
+## 📖 Overview
 
-## What is chezmoi?
+This repository contains configuration files for my shell, editor, and other tools.
+Using **chezmoi**, these files are version-controlled, reproducible, and can be deployed across any machine I use.
 
-[chezmoi](https://www.chezmoi.io/) is a powerful tool for managing your dotfiles securely and reproducibly across multiple systems. It keeps your home directory in sync and makes it easy to apply updates or changes.
+---
 
-## Features
+## 🚀 Features
 
-- Version-controlled dotfiles
-- Easy setup on new machines
-- Secure management of secrets
-- Cross-platform support (Linux, macOS, Windows)
+- **Version-controlled** dotfiles for easy synchronization
+- **Cross-platform** support (macOS, Linux, Windows)
+- **Secure secret management** with chezmoi’s encryption & template features
+- **Rapid setup** for new machines
 
-## Getting Started
+---
 
-### 1. Install chezmoi
+## 🛠️ Getting Started
 
-- macOS: `brew install chezmoi`
-- Linux: `sh -c "$(curl -fsLS get.chezmoi.io)"`
-- Windows: [See official docs](https://www.chezmoi.io/install/)
-
-### 2. Initialize chezmoi with this repo
+### 1️⃣ Install chezmoi
 
 ```sh
-chezmoi init --apply <your-github-username>
+# macOS
+brew install chezmoi
+
+# Linux
+sh -c "$(curl -fsLS get.chezmoi.io)"
+
+# Windows
+# See: https://www.chezmoi.io/install/
 ```
-Or, if you already have the repo cloned:
+
+### 2️⃣ Initialize with this repository
+
+```sh
+chezmoi init --apply aherendeen
+```
+
+Or, if already cloned:
+
 ```sh
 chezmoi apply
 ```
 
-### 3. Edit and manage your dotfiles
+### 3️⃣ Managing dotfiles
 
-- To add a new dotfile: `chezmoi add ~/.yourfile`
-- To edit a dotfile: `chezmoi edit ~/.yourfile`
-- To apply changes: `chezmoi apply`
-
-## Customization
-
-- Update files in the `dot_` prefixed files and directories, which represent your actual dotfiles (e.g., `.bashrc` is stored as `dot_bashrc`) to avoid issues with hidden files in version control systems.
-- Use chezmoi templates for machine-specific or secret data.
-- Store secrets securely using [chezmoi's secret management](https://www.chezmoi.io/user-guide/secrets/).  
-  For example, you can use `chezmoi secret add my_secret` to add a secret, and reference it in templates with `{{ (chezmoi.secret "my_secret") }}`.
-
-## Useful Commands
-
-- `chezmoi status` – See what will change
-- `chezmoi diff` – Preview changes
-- `chezmoi update` – Pull latest changes from the repo
-- `chezmoi doctor` – Diagnose issues
-
-## Resources
-
-- [chezmoi documentation](https://www.chezmoi.io/docs/)
-- [chezmoi templates](https://www.chezmoi.io/user-guide/templates/)
-
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome! To contribute:
-
-- Fork this repository
-- Create a new branch for your changes
-- Submit a pull request with a clear description
-
-For questions or ideas, open an issue or discussion.
+```sh
+chezmoi add ~/.yourfile      # Track a new file
+chezmoi edit ~/.yourfile     # Edit tracked file
+chezmoi diff                 # Preview changes
+chezmoi apply                # Apply changes
+```
 
 ---
 
-Feel free to fork or adapt these dotfiles for your own use!
+## 🔒 Secrets
+
+Secrets are **never** stored in plaintext.
+I use chezmoi with [Bitwarden](https://bitwarden.com/) and [age](https://github.com/FiloSottile/age) for secure secret management.
+
+- Add a secret:
+
+  ```sh
+  chezmoi secret add my_secret
+  ```
+
+- Use it in a template:
+
+  ```go
+  {{ (chezmoi.secret "my_secret") }}
+  ```
+
+---
+
+## 📚 Documentation
+
+- [Dotfiles Documentation Index](./docs/index.md)
+- [chezmoi official docs](https://www.chezmoi.io/docs/)
+- [Template usage guide](https://www.chezmoi.io/user-guide/templates/)
+
+---
+
+## 💡 Useful Commands
+
+| Command             | Description                          |
+|---------------------|--------------------------------------|
+| `chezmoi status`    | Show pending changes                 |
+| `chezmoi diff`      | Preview what will change              |
+| `chezmoi update`    | Pull + apply changes from the repo    |
+| `chezmoi doctor`    | Run diagnostics                      |
+
+---
+
+## 🤝 Contributing
+
+PRs and suggestions are welcome.
+
+1. Fork this repository
+2. Create a feature branch
+3. Commit and push your changes
+4. Open a pull request
+
+---
+
+### 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+> **Tip:** Fork freely — but be mindful of how you handle secrets. Never commit unencrypted sensitive files.
