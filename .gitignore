@@ -1,0 +1,14 @@
+.codacy/
+.bw_session
+.config/age/keys.txt
+.gnupg/
+.zshrc.local
+.zshrc.bw
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+*.log
+.github/*.log
+.github/*.tmp
+.github/*-debug/
