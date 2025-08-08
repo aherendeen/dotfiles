@@ -1,0 +1,50 @@
+name: Codacy Coverage (conditional)
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  upload-coverage:
+    if: ${{ github.event_name == 'pull_request' || github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find coverage file
+        id: findcov
+        shell: bash
+        run: |
+          set -e
+          CANDIDATES=(
+            "coverage.xml"
+            "coverage/coverage.xml"
+            "coverage/lcov.info"
+            "lcov.info"
+          )
+          for f in "${CANDIDATES[@]}"; do
+            if [ -f "$f" ]; then
+              echo "found=$f" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "found=" >> "$GITHUB_OUTPUT"
+
+      - name: Skip if nothing to upload
+        if: ${{ steps.findcov.outputs.found == '' }}
+        run: echo "No coverage file found. Skipping upload."
+
+      - name: Upload coverage to Codacy
+        if: ${{ steps.findcov.outputs.found != '' }}
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ secrets.CODACY_API_TOKEN }}
+          coverage-reports: ${{ steps.findcov.outputs.found }}
