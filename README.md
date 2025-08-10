@@ -7,25 +7,25 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 This repository contains configuration files for my shell, editor, and other tools.
 Using **chezmoi**, these files are version-controlled, reproducible, and can be deployed across any machine I use.
 
 ---
 
-## 🚀 Features
+## Features
 
-- **Version-controlled** dotfiles for easy synchronization
-- **Cross-platform** support (macOS, Linux, Windows)
-- **Secure secret management** with chezmoi’s encryption & template features
-- **Rapid setup** for new machines
+- Version-controlled dotfiles for easy synchronization
+- Cross-platform support (macOS, Linux, Windows)
+- Secure secret management with chezmoi’s encryption & template features
+- Rapid setup for new machines
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
-### 1️⃣ Install chezmoi
+### 1. Install chezmoi
 
 ```sh
 # macOS
@@ -38,7 +38,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)"
 # See: https://www.chezmoi.io/install/
 ```
 
-### 2️⃣ Initialize with this repository
+### 2. Initialize with this repository
 
 ```sh
 chezmoi init --apply aherendeen
@@ -50,7 +50,7 @@ Or, if already cloned:
 chezmoi apply
 ```
 
-### 3️⃣ Managing dotfiles
+### 3. Managing dotfiles
 
 ```sh
 chezmoi add ~/.yourfile      # Track a new file
@@ -61,9 +61,9 @@ chezmoi apply                # Apply changes
 
 ---
 
-## 🔒 Secrets
+## Secrets
 
-Secrets are **never** stored in plaintext.
+Secrets are never stored in plaintext.
 I use chezmoi with [Bitwarden](https://bitwarden.com/) and [age](https://github.com/FiloSottile/age) for secure secret management.
 
 - Add a secret:
@@ -80,7 +80,7 @@ I use chezmoi with [Bitwarden](https://bitwarden.com/) and [age](https://github.
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - [Dotfiles Documentation Index](./docs/index.md)
 - [chezmoi official docs](https://www.chezmoi.io/docs/)
@@ -88,7 +88,7 @@ I use chezmoi with [Bitwarden](https://bitwarden.com/) and [age](https://github.
 
 ---
 
-## 💡 Useful Commands
+## Useful Commands
 
 | Command             | Description                          |
 |---------------------|--------------------------------------|
@@ -99,7 +99,7 @@ I use chezmoi with [Bitwarden](https://bitwarden.com/) and [age](https://github.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 PRs and suggestions are welcome.
 
@@ -110,10 +110,10 @@ PRs and suggestions are welcome.
 
 ---
 
-### 📜 License
+### License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-> **Tip:** Fork freely — but be mindful of how you handle secrets. Never commit unencrypted sensitive files.
+> Tip: Fork freely — but be mindful of how you handle secrets. Never commit unencrypted sensitive files.
