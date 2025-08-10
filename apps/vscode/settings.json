@@ -1,0 +1,120 @@
+{
+  "editor.fontFamily": "Hack, JetBrains Mono, Fira Code, Cascadia Code, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, FiraCode Nerd Font, MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
+  "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
+  "editor.quickSuggestionsDelay": 10,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.removeUnusedImports": "explicit"
+  },
+
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.external.osxExec": "iTerm.app",
+  "eslint.run": "onSave",
+  "prettier.documentSelectors": ["**/*.astro", "**/*.js", "**/*.ts"],
+  "prettier.requireConfig": true,
+  "prettier.experimentalTernaries": true,
+  "github.copilot.enable": {
+    "markdown": true,
+    "scminput": true,
+    "plaintext": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  "workbench.iconTheme": "spacebox.file-icon-theme",
+  "projectManager.git.baseFolders": [
+    "~/git"
+  ],
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/build/**": true,
+    "**/dist/**": true,
+    "**/.next/**": true,
+    "**/.nuxt/**": true,
+    "**/coverage/**": true,
+    "**/.vscode/**": true,
+    "**/tmp/**": true,
+    "**/temp/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/.next": true,
+    "**/.nuxt": true,
+    "**/coverage": true,
+    "**/.vscode": true,
+    "**/tmp": true,
+    "**/temp": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+
+
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+  },
+  "workbench.colorCustomizations": {}
+}

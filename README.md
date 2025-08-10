@@ -1,4 +1,4 @@
-# Dotfiles
+# dotfiles
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/64b82ab35f5946f7907bd071f0ae6d76)](https://app.codacy.com/gh/aherendeen/dotfiles/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![GitHub License](https://img.shields.io/github/license/aherendeen/dotfiles)](LICENSE)
