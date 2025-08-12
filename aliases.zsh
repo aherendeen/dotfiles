@@ -114,6 +114,10 @@ alias cma="chezmoi apply"
 alias cme="chezmoi edit"
 alias cms="chezmoi status"
 alias cmd="chezmoi diff"
+alias cmr="chezmoi restore"
+
+# --- VS Code Insiders ---
+alias codei="code-insiders"
 
 # --- Safety: Confirm before overwriting files ---
 setopt noclobber
