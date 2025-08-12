@@ -78,5 +78,7 @@
     "workbench.editorAssociations": {
         "*.copilotmd": "vscode.markdown.preview.editor",
         "*.png": "imagePreview.previewEditor"
-    }
+    },
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false
 }
