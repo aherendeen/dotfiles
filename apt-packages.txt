@@ -1,0 +1,16 @@
+build-essential
+zsh
+vim
+tmux
+fzf
+ripgrep
+bat
+htop
+wget
+curl
+starship
+chezmoi
+git
+python3-pip
+nodejs
+npm
